@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Komunikasi Data | Putri Sophia</title>
+
+<style>
+:root {
+    --navy: #17283f;
+    --navy-light: #243b59;
+    --gold: #b69a63;
+    --cream: #f8f7f3;
+    --white: #ffffff;
+    --text: #303b49;
+    --muted: #6f7b88;
+    --border: #e5e2da;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.8;
+}
+
+/* NAVIGASI */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* HERO */
+.hero {
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    padding: 90px 8%;
+    color: white;
+    background:
+        linear-gradient(110deg, rgba(23, 40, 63, 0.98), rgba(36, 59, 89, 0.91)),
+        var(--navy);
+}
+
+.hero-content {
+    max-width: 780px;
+}
+
+.eyebrow {
+    color: #d7c49c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 5.5vw, 64px);
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #d7c49c;
+}
+
+.hero p {
+    max-width: 650px;
+    color: #dce3eb;
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.hero .author {
+    margin-top: 25px;
+    color: #d7c49c;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.hero-button:hover {
+    background: #d0b783;
+    transform: translateY(-2px);
+}
+
+/* BAGIAN MATERI */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 75px 30px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--navy);
+    font-size: 38px;
+    font-weight: 500;
+    margin: 8px 0 12px;
+}
+
+.section-heading p {
+    max-width: 750px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* ARTIKEL */
+.material {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 35px 40px;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 25px rgba(23, 40, 63, 0.035);
+}
+
+.material-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.material-number {
+    flex-shrink: 0;
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.material h3 {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.material-intro {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.material h4 {
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.material ul {
+    list-style: none;
+}
+
+.material li {
+    position: relative;
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid #f0eee9;
+    font-size: 14px;
+}
+
+.material li:last-child {
+    border-bottom: none;
+}
+
+.material li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+.material strong {
+    color: var(--navy);
+}
+
+/* FOOTER */
+footer {
+    background: var(--navy);
+    color: #dce3eb;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 13px;
+}
+
+footer strong {
+    color: #d7c49c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+    nav {
+        padding: 16px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 70px 6%;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 50px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .material {
+        padding: 25px 22px;
+    }
+
+    .material-header {
+        gap: 13px;
+    }
+
+    .material-number {
+        font-size: 25px;
+    }
+
+    .material h3 {
+        font-size: 21px;
+    }
+
+    .material li {
+        font-size: 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">KOMUNIKASI DATA</div>
+
+    <div class="nav-links">
+        <a href="#home">Beranda</a>
+        <a href="#tugas">Tugas 1</a>
+    </div>
+</nav>
+
+<header class="hero" id="home">
+    <div class="hero-content">
+        <div class="eyebrow">Mata Kuliah · Komunikasi Data</div>
+
+        <h1>
+            Sistem dan<br>
+            <span>Komunikasi Data</span>
+        </h1>
+
+        <p>
+            Kajian mengenai penerapan komunikasi data dalam kehidupan
+            sehari-hari, mulai dari sistem pemantauan digital hingga
+            jaringan dan layanan berbasis internet.
+        </p>
+
+        <p class="author">Disusun oleh Putri Sophia</p>
+
+        <a href="#tugas" class="hero-button">Jelajahi Tugas 1 &nbsp; →</a>
+    </div>
+</header>
+
+<main id="tugas">
+    <div class="section-heading">
+        <div class="section-label">Dokumentasi Akademik</div>
+        <h2>Tugas 1</h2>
+        <p>
+            Analisis lima contoh komunikasi data berdasarkan pengiriman,
+            penerimaan, pesan, media komunikasi, aliran komunikasi,
+            jenis data, dan cara kerja.
+        </p>
+    </div>
+
+    <!-- MATERI 1 -->
+    <article class="material">
+        <div class="material-header">
+            <span class="material-number">01</span>
+            <h3>Menggunakan CCTV Online</h3>
+        </div>
+
+        <p class="material-intro">
+            CCTV online digunakan untuk memantau keadaan rumah melalui
+            kamera yang terhubung ke internet. Pemilik rumah dapat melihat
+            rekaman atau tayangan langsung melalui HP.
+        </p>
+
+        <h4>Analisis Komunikasi Data</h4>
+        <ul>
+            <li><strong>Pengiriman:</strong> Kamera CCTV mengirimkan rekaman video.</li>
+            <li><strong>Penerimaan:</strong> HP pemilik rumah menerima tampilan video.</li>
+            <li><strong>Pesan:</strong> Gambar dan video keadaan rumah.</li>
+            <li><strong>Media komunikasi:</strong> Internet dan jaringan Wi-Fi.</li>
+            <li><strong>Aliran komunikasi:</strong> Satu arah (simplex) untuk pengiriman video dari kamera ke HP.</li>
+            <li><strong>Jenis data:</strong> Data video dan gambar.</li>
+            <li><strong>Cara kerja:</strong> Kamera CCTV merekam keadaan rumah, kemudian mengirimkan video melalui jaringan internet. Pemilik rumah membuka aplikasi CCTV di HP untuk melihat keadaan rumah.</li>
+        </ul>
+    </article>
+
+    <!-- MATERI 2 -->
+    <article class="material">
+        <div class="material-header">
+            <span class="material-number">02</span>
+            <h3>Menggunakan Google Maps</h3>
+        </div>
+
+        <p class="material-intro">
+            Google Maps membantu pengguna mencari lokasi, nama jalan,
+            dan petunjuk arah menuju tempat tujuan, misalnya kampus.
+        </p>
+
+        <h4>Analisis Komunikasi Data</h4>
+        <ul>
+            <li><strong>Pengiriman:</strong> HP mengirimkan permintaan pencarian lokasi.</li>
+            <li><strong>Penerimaan:</strong> Sistem Google Maps menerima permintaan.</li>
+            <li><strong>Pesan:</strong> Informasi lokasi, nama jalan, dan petunjuk arah.</li>
+            <li><strong>Media komunikasi:</strong> Internet dan GPS.</li>
+            <li><strong>Aliran komunikasi:</strong> Dua arah, karena pengguna mengirim permintaan dan menerima informasi dari sistem.</li>
+            <li><strong>Jenis data:</strong> Data teks, angka, dan lokasi.</li>
+            <li><strong>Cara kerja:</strong> Pengguna membuka Google Maps dan memasukkan alamat tujuan. Sistem mencari rute lalu menampilkan petunjuk perjalanan pada layar HP.</li>
+        </ul>
+    </article>
+
+    <!-- MATERI 3 -->
+    <article class="material">
+        <div class="material-header">
+            <span class="material-number">03</span>
+            <h3>Pembayaran Menggunakan QRIS</h3>
+        </div>
+
+        <p class="material-intro">
+            QRIS digunakan untuk melakukan pembayaran digital,
+            misalnya saat membeli minuman di warung.
+        </p>
+
+        <h4>Analisis Komunikasi Data</h4>
+        <ul>
+            <li><strong>Pengiriman:</strong> HP pembeli mengirimkan permintaan pembayaran.</li>
+            <li><strong>Penerimaan:</strong> Sistem pembayaran dan bank penerima memproses transaksi.</li>
+            <li><strong>Pesan:</strong> Informasi pembayaran dan jumlah uang yang dibayarkan.</li>
+            <li><strong>Media komunikasi:</strong> Internet, aplikasi pembayaran, dan sistem QRIS.</li>
+            <li><strong>Aliran komunikasi:</strong> Dua arah, karena sistem menerima permintaan dan mengirimkan status pembayaran.</li>
+            <li><strong>Jenis data:</strong> Data angka, teks, dan kode QR.</li>
+            <li><strong>Cara kerja:</strong> Pembeli membuka aplikasi pembayaran, memindai kode QRIS, memasukkan nominal, lalu mengonfirmasi pembayaran. Sistem memproses transaksi dan mengirimkan pemberitahuan berhasil atau gagal.</li>
+        </ul>
+    </article>
+
+    <!-- MATERI 4 -->
+    <article class="material">
+        <div class="material-header">
+            <span class="material-number">04</span>
+            <h3>Mengirim File Menggunakan Google Drive</h3>
+        </div>
+
+        <p class="material-intro">
+            Google Drive memungkinkan mahasiswa mengunggah dan
+            membagikan file makalah atau tugas kepada teman secara online.
+        </p>
+
+        <h4>Analisis Komunikasi Data</h4>
+        <ul>
+            <li><strong>Pengiriman:</strong> Mahasiswa mengunggah file ke Google Drive dan membagikan akses kepada temannya.</li>
+            <li><strong>Penerimaan:</strong> Teman menerima tautan dan mengakses file tersebut.</li>
+            <li><strong>Pesan:</strong> File makalah atau dokumen tugas.</li>
+            <li><strong>Media komunikasi:</strong> Internet dan aplikasi Google Drive.</li>
+            <li><strong>Aliran komunikasi:</strong> Dua arah, karena pengguna dapat mengirim, menerima, dan bertukar informasi.</li>
+            <li><strong>Jenis data:</strong> Data dokumen, teks, gambar, dan PDF.</li>
+            <li><strong>Cara kerja:</strong> Pengguna membuka Google Drive, mengunggah file, kemudian membagikan tautan kepada teman. Teman membuka tautan tersebut untuk melihat atau mengunduh file.</li>
+        </ul>
+    </article>
+
+    <!-- MATERI 5 -->
+    <article class="material">
+        <div class="material-header">
+            <span class="material-number">05</span>
+            <h3>Menggunakan Wi-Fi di Rumah</h3>
+        </div>
+
+        <p class="material-intro">
+            Wi-Fi rumah menghubungkan HP atau laptop ke jaringan
+            internet melalui router.
+        </p>
+
+        <h4>Analisis Komunikasi Data</h4>
+        <ul>
+            <li><strong>Pengiriman:</strong> HP mengirimkan permintaan untuk membuka halaman internet.</li>
+            <li><strong>Penerimaan:</strong> Router dan server tujuan menerima serta memproses permintaan.</li>
+            <li><strong>Pesan:</strong> Permintaan untuk membuka situs atau mencari informasi.</li>
+            <li><strong>Media komunikasi:</strong> Router Wi-Fi dan jaringan internet.</li>
+            <li><strong>Aliran komunikasi:</strong> Dua arah, karena HP mengirim dan menerima data melalui jaringan.</li>
+            <li><strong>Jenis data:</strong> Data teks, gambar, audio, dan video.</li>
+            <li><strong>Cara kerja:</strong> HP terhubung ke jaringan Wi-Fi, kemudian pengguna membuka situs atau aplikasi. Permintaan dikirim melalui router ke internet. Server mengirimkan informasi kembali ke HP.</li>
+        </ul>
+    </article>
+</main>
+
+<footer>
+    <p>© 2026 <strong>Komunikasi Data</strong></p>
+    <p>Disusun oleh Putri Sophia</p>
+</footer>
+
+</body>
+</html>
